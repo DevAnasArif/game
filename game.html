@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor Game</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+    h1{
+        background-color: #081b31;
+        color:white;
+        height: 75px;
+        line-height: 75px;
+    }
+    .choices{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 5rem;
+    }
+    
+    .choice:hover{
+        cursor: pointer;
+        background-color: black;
+    }
+    .choice{
+        justify-content: center;
+        align-items: center;
+        height: 165px;
+        width: 165px;
+        display:flex;
+        border-radius:50%;
+    }
+    img{
+        height: 150px;
+        width: 150px;
+        object-fit: cover;
+        border-radius:50%;
+    }
+    .score-board{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:2rem;
+        margin-top: 3rem;
+        gap: 5rem;
+    }
+    #comp-score,#user-score{
+        font-size: 4rem;
+    }
+    .msg-container{
+        margin-top: 5rem;
+    }
+    #msg:hover{
+        cursor:default;
+    }
+    #msg{
+        background-color: #081b31;
+        color:white;
+        font-size:2rem;
+        display: inline;
+        padding: 1rem;
+        border-radius: 1rem;
+    }
+</style>
+<body>
+    <h1>
+        Rock Paper Scissor
+    </h1>
+    <div class="choices">
+        <div class="choice" id="rock">
+            <img src="/img/rock.png" alt="rock"/>
+        </div>
+        <div class="choice" id="paper">
+            <img src="/img/paper.png" alt="paper"/>
+        </div>
+        <div class="choice" id="scissors">
+            <img src="./img/scissors.png" alt="scissors"/>
+        </div>
+    </div>
+    <div class="score-board">
+        <div class="score">
+            <p id="user-score">0</p>
+            <p>You</p>
+        </div>
+        <div class="score">
+            <p id="comp-score">0</p>
+            <p>Comp</p>
+        </div>
+    </div>
+    <div class="msg-container">
+        <p id="msg">
+            Play Your Move
+        </p>
+    </div>
+</body>
+<script src="./game.js"></script>
+</html>
